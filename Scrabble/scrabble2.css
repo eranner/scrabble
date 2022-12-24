@@ -1,0 +1,492 @@
+html {
+    background-color: rgb(209, 189, 164)
+}
+
+#gameBoard {
+    height: 1200px;
+    width: 1200px;
+    border: 5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 17.5%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+#gameBoard2 {
+    height: 1200px;
+    width: 1200px;
+    border: 5px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 17.7%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    z-index: 10;
+    top: 6px;
+    
+}
+
+.box {
+    height: 80px;
+    width: 80px;
+    outline: 2px solid black;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+   
+}
+
+#lettersA_M {
+
+    height: 1100px;
+    width: 350px;
+    top: 0%;
+    position: absolute;
+    
+    margin: 0 0 0 0;
+   
+  
+}
+
+#lettersN_Z {
+    display: flex;
+    flex-wrap: wrap;
+    height: 1100px;
+    width: 350px;
+    
+    position: absolute;
+    left: 70%;
+    top: 0%;
+    margin: 0 0 0 0;
+    align-items: center;
+}
+
+.tile {
+    height: 150px;
+    width: 150px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.redo {
+    height: 84px;
+    width: 84px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+}
+
+#a1, #h1, #h15 {
+    background-color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+
+}
+
+#a8 {
+    background-color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#a15 {
+    background-color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+
+}
+
+#a4 {
+    background-color: rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#a12 {
+    background-color: rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#o1 {
+    background-color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+#o8 {
+    background-color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#o15 {
+    background-color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+
+}
+
+#o4 {
+    background-color: rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#o12 {
+    background-color: rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#b2 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#b14 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#b6 {
+    background-color: rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;;
+}
+
+#b10 {
+    background-color:  rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#n6 {
+    background-color: rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#n10 {
+    background-color:  rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#n2 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#n14 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#c3 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+#c13 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#c7 {
+    background-color:rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#c9 {
+    background-color: rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#m3 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+#m13 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#m7 {
+    background-color:rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#m9 {
+    background-color: rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#d4 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#d12 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#l4 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;;
+}
+
+#l12 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#d1 {
+    background-color:rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+#d8 {
+    background-color:rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#d15 {
+    background-color:rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#l1 {
+    background-color:rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+#l8 {
+    background-color:rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#l15 {
+    background-color:rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#e5 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;;
+}
+
+#e11 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#k5 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#k11 {
+    background-color: pink;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#f2 {
+    background-color: rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#f6 {
+    background-color: rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#f10 {
+    background-color: rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#f14 {
+    background-color: rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#j2 {
+    background-color: rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#j6 {
+    background-color: rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#j10 {
+    background-color: rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#j14 {
+    background-color: rgb(37, 147, 155);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#g3, #g7, #g9, #g13 {
+    background-color:rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#i3, #i7, #i9, #i13, #h4, #h12 {
+    background-color:rgb(79, 175, 231);
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px #333;
+}
+
+#h8 {
+    background-color: pink;
+    font-size: 5rem;
+    text-align: center;
+    color: black;
+    
+    text-align: center;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    
+}

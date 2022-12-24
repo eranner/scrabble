@@ -1,0 +1,204 @@
+@font-face {
+    font-family: scrabble;
+    src: url(SecularOne-Regular.ttf);
+}
+
+/*html {
+    background-color: rgb(218, 181, 104);
+    background-image: url(WoodGrain04-byGhostlyPixels.png);
+    background-repeat: no-repeat;
+   
+}*/
+body{
+    height: 2000px;
+}
+#deadSpace {
+    height: 1000px;
+}
+.tile {
+    height: 84px;
+    width: 84px;
+    z-index: 2000;
+    padding: 0; 
+    margin: 0;
+    cursor: pointer;
+}
+
+.tile:hover {
+    transform: translate(2px, 2px);
+    
+}
+#logo {
+    height: 700px;
+    position: sticky;
+    left: 25%;
+    top: 10%;
+    margin: 0 auto;
+    padding: 0 auto;
+    justify-content: center;
+    display: flex;
+    
+}
+#open {
+    position: sticky;
+    top: 10px;
+    width: 120px;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #333;
+    text-align: center;
+    background-color: rgb(209, 209, 114);
+    color: rgb(77, 77, 238);
+    z-index: 1000;
+    cursor: pointer;
+    font-family: scrabble;
+    border-radius: 10px;
+}
+
+#close {
+    font-size: 1.5rem;
+      text-shadow: 1px 1px #333;
+    background-color: rgb(209, 209, 114);
+    color: rgb(77, 77, 238);
+    cursor: pointer;
+    font-family: scrabble;
+    border-radius: 10px;
+    
+}
+
+#container {
+    justify-content: center;
+    display: flex;
+}
+#letterContainer {
+    
+
+   position: sticky;
+   top: 2px;
+   z-index: 1000;
+   display: flex;
+   justify-content: center;
+}
+#letters {
+    
+   width: 790px;
+
+   position: sticky;
+   top: 2px;
+   z-index: 1000;
+   background-color:rgba(148, 147, 147, 0.589);
+   border-radius: 10px;
+   padding: 0;
+   margin: 0;
+   opacity: 0;
+  
+   
+  
+}
+
+
+#gameBoard {
+    height: 1680px;
+    width: 1680px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    
+    position: absolute;
+   font-family: scrabble;
+   
+   
+}
+
+#gameBoard2 {
+    height: 1680px;
+    width: 1680px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    z-index: 10;
+    
+    
+    
+    
+    
+}
+.box {
+    height: 80px;
+    width: 80px;
+    outline: 2px solid black;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    
+   
+}
+
+#a4, #a11, #a18, #d1, #d7, #d15, #d21, #g4, #g11, #g18, #f10, #f12, #p10, #p12, #j6, #j10, #j12, #j16, #k1, #k7, #k15, #k21, #l6, #l10, #l12, #l16, #o4, #o11, #o18, #r1, #r7, #r15, #r21,
+#u4, #u11, #u18 {
+    
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(185, 181, 181);
+    
+}
+
+#a1, #a21, #u1, #u21 {
+    
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(185, 181, 181);
+}
+
+#b2, #b9, #b13, #b20,
+#t2, #t9, #t13, #t20,
+#c3, #c10, #c12, #c19,
+#s3, #s10, #s12, #s19,
+#e5, #e17, #q5, #q17,
+#f6, #f16, #p6, #p16,
+#g7, #g15, #o7, #o15,
+#h8, #h14, #n8, #n14,
+#i2, #i20, #m2, #m20,
+#j3, #j19, #l3, #l19, #k11 {
+   
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(185, 181, 181);
+}
+
+#c6, #c16, #s6, #s16,
+#f3, #f19, #p3, #p19 {
+    
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(185, 181, 181);
+}
+
+#b5, #b17, #t5, #t17,
+#e2, #e9, #e13, #e20,
+#q2, #q9, #q13, #q20,
+#i5, #i9, #i13, #i17,
+#m5, #m9, #m13, #m17 {
+  
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(185, 181, 181);
+}
+
+#a8, #a14, #u8, #u14,
+#d4, #d11, #d18,
+#r4, #r11, #r18,
+#h1, #h21, #n1, #n21,
+#k4, #k18 {
+    
+    font-size: 1.2rem;
+    text-align: center;
+    color: rgb(185, 181, 181);
+}

@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble</title>
+
+    <link rel="stylesheet" href="scrabbleBoard15x15.css">
+</head>
+<body>
+    <img id="logo" src="scrab_wood.png">
+ <!-- <div id='blue' draggable="true" ondragstart="drag(ev)" style="height: 100px; width: 100px; background-color: blue;"></div> 
+   <div id='grey' style="height: 150px; width: 150px; background-color: #333;"></div> -->
+    <div id="letterContainer">
+    <div id="letters">
+        <!--A Tiles-->
+    <img class="tile" id="a"  draggable="true" ondragstart="drag(event)" src="./A.svg" >
+    
+    
+    <!--B Tiles-->
+    
+        <img class="tile" id="b" ondragstart="drag(event)" draggable=true src="./B.svg">  
+                   
+     
+       
+       <!--C Tiles-->
+        <img class="tile" id="c" ondragstart="drag(event)" draggable=true src="./C.svg"> 
+            
+        
+    
+     <!--D Tiles-->
+        <img class="tile" id="d" ondragstart="drag(event)" draggable=true src="./D.svg">   
+     
+    
+     <!--E Tiles-->
+        <img class="tile" id="e" ondragstart="drag(event)" draggable=true src="./E.svg">
+    
+    
+    
+    
+    <!--F Tiles-->
+    
+        <img class="tile" id='f' ondragstart="drag(event)" draggable="true" src="./F.svg">    
+       
+    
+     <!--G Tiles-->
+        <img class="tile" id="g" ondragstart="drag(event)" draggable="true" src="./G.svg">   
+    
+        <!--H Tiles-->
+        <img class="tile" id="h" ondragstart="drag(event)" draggable="true" src="./H.svg">    
+       
+    
+    <!--I Tiles-->
+        <img class="tile" id='i' ondragstart="drag(event)" draggable="true" src="./I.svg">    
+     
+    
+        <img class="tile" id="j" ondragstart="drag(event)" draggable="true"src="./J.svg">
+    
+        <img class="tile" id='k'ondragstart="drag(event)" draggable="true" src="./K.svg">
+    
+        <img class="tile" id='l' ondragstart="drag(event)" draggable="true" src="./L.svg">
+    
+    
+    
+        <img class="tile" id="m" ondragstart="drag(event)" draggable="true" src="./M.svg">
+      
+        
+        <img class="tile" id="n" ondragstart="drag(event)" draggable="true" src="./N.svg">
+    
+    
+    
+        <img class="tile" id="o" ondragstart="drag(event)" draggable="true" src="./O.svg">
+    
+    
+    
+        <img class="tile" id="p" ondragstart="drag(event)" draggable="true" src="./P.svg">
+    
+    
+    
+        <img class="tile" id="q" ondragstart="drag(event)" draggable="true" src="./Q.svg">
+    
+        <img class="tile" id= "r" ondragstart="drag(event)" draggable="true" src="./R.svg">
+    
+    
+        <img class="tile" id="s" ondragstart="drag(event)" draggable="true" src="./S.svg">
+    
+    
+    
+        <img class="tile" id="t" ondragstart="drag(event)" draggable="true" src="./T.svg">
+    
+    
+        <img class="tile" id="u" ondragstart="drag(event)" draggable="true" src="./U.svg">
+    
+    
+    
+        <img class="tile" id="v" ondragstart="drag(event)" draggable="true" src="./V.svg">
+        
+    
+    
+        <img class="tile" id="w" ondragstart="drag(event)" draggable="true" src="./W.svg">
+        
+    
+    
+        <img class="tile" id="x" ondragstart="drag(event)" draggable="true" src="./X.svg">
+    
+    
+        <img class="tile" id="y" ondragstart="drag(event)" draggable="true" src="./Y.svg">
+        
+    
+    
+        <img class="tile" id="z" ondragstart="drag(event)" draggable="true" src="./Z.svg">
+    
+        <img class="tile" id='blank' ondragstart="drag(event)" draggable="true" src="./BLANK.svg">
+       
+        <button id="close">CLOSE</button>
+    </div>
+</div>
+    <button id="open">LETTERS</button>
+
+      
+            <div id="stopwatch">60</div>
+            <button id="starter" onclick="startTimer();">Start </button><br>
+            <button id="stopTime" onclick="stopTimer();">Stop </button><br>
+            <button id="resetTime" onclick="resetTimer();">Reset</button>
+    
+   
+    <div id="container" >
+        <div id="gameBoard2">
+ <div class="box" ondrop="drop(event)"
+ ondragover="allowDrop(event)"id="aa1" ></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa2" ></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)"id="aa3"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)"id="aa9"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa10"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)"id="aa12"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa13"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa14"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="aa15"></div>
+
+
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb3"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb9"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb13"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb14"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="bb15"></div>
+
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc3"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc9"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc13"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc14"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="cc15"></div>
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd3"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd9"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd13"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd14"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="dd15"></div>
+
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee2"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee3"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee4"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee5"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee6"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee7"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee8"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee9"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee10"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee11"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee12"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee13"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee14"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ee15"></div>
+
+
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff1"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff2"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff3"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff4"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff5"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff6"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff7"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff8"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff9"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff10"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff11"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff12"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff13"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff14"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ff15"></div>
+
+
+
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg1"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg3"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg9"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg13"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg14"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="gg15"></div>
+
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh3"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)"  id="hh4"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh5"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh9"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh13"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh14"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="hh15"></div>
+
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii3"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii9"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii13"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii14"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ii15"></div>
+
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj3"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj9"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj13"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj14"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="jj15"></div>
+
+
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk3"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk9"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="k12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk13"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk14"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="kk15"></div>
+
+
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll2"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)"  id="ll3"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll4"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll5"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll6"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll7"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll8"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll9"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll10"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll11"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll12"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll13"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll14"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="ll15"></div>
+
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm3"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)"  id="mm4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm9"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm13"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)"  id="mm14"></div>
+<div class="box"  ondrop="drop(event)"
+ondragover="allowDrop(event)" id="mm15"></div>
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)"id="nn2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)"id="nn3"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn7"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)"  id="nn8"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn9"></div>
+<div class="box"ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn13"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn14"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="nn15"></div>
+
+
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo1"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo2"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo3"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo4"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo5"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo6"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo7"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo8"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo9"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo10"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo11"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo12"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo13"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo14"></div>
+<div class="box" ondrop="drop(event)"
+ondragover="allowDrop(event)" id="oo15"></div>
+
+
+
+        
+    <div id="gameBoard">
+        
+<div class="box" id="a1" >TRIPLE WORD SCORE</div>
+<div class="box" id="a2" ></div>
+<div class="box" id="a3"></div>
+<div class="box" id="a4">DOUBLE LETTER SCORE</div>
+<div class="box" id="a5"></div>
+<div class="box" id="a6"></div>
+<div class="box" id="a7"></div>
+<div class="box" id="a8">TRIPLE WORD SCORE</div>
+<div class="box" id="a9"></div>
+<div class="box" id="a10"></div>
+<div class="box" id="a11"></div>
+<div class="box" id="a12">DOUBLE LETTER SCORE</div>
+<div class="box" id="a13"></div>
+<div class="box" id="a14"></div>
+<div class="box" id="a15">TRIPLE WORD SCORE</div>
+
+
+
+<div class="box" id="b1"></div>
+<div class="box" id="b2">DOUBLE WORD SCORE</div>
+<div class="box" id="b3"></div>
+<div class="box" id="b4"></div>
+<div class="box" id="b5"></div>
+<div class="box" id="b6">TRIPLE LETTER SCORE</div>
+<div class="box" id="b7"></div>
+<div class="box" id="b8"></div>
+<div class="box" id="b9"></div>
+<div class="box" id="b10">TRIPLE LETTER SCORE</div>
+<div class="box" id="b11"></div>
+<div class="box" id="b12"></div>
+<div class="box" id="b13"></div>
+<div class="box" id="b14">DOUBLE WORD SCORE</div>
+<div class="box" id="b15"></div>
+
+
+<div class="box" id="c1"></div>
+<div class="box" id="c2"></div>
+<div class="box" id="c3">DOUBLE WORD SCORE</div>
+<div class="box" id="c4"></div>
+<div class="box" id="c5"></div>
+<div class="box" id="c6"></div>
+<div class="box" id="c7">DOUBLE LETTER SCORE</div>
+<div class="box" id="c8"></div>
+<div class="box" id="c9">DOUBLE LETTER SCORE</div>
+<div class="box" id="c10"></div>
+<div class="box" id="c11"></div>
+<div class="box" id="c12"></div>
+<div class="box" id="c13">DOUBLE WORD SCORE</div>
+<div class="box" id="c14"></div>
+<div class="box" id="c15"></div>
+
+
+<div class="box" id="d1">DOUBLE LETTER SCORE</div>
+<div class="box" id="d2"></div>
+<div class="box" id="d3"></div>
+<div class="box" id="d4">DOUBLE WORD SCORE</div>
+<div class="box" id="d5"></div>
+<div class="box" id="d6"></div>
+<div class="box" id="d7"></div>
+<div class="box" id="d8">DOUBLE LETTER SCORE</div>
+<div class="box" id="d9"></div>
+<div class="box" id="d10"></div>
+<div class="box" id="d11"></div>
+<div class="box" id="d12">DOUBLE WORD SCORE</div>
+<div class="box" id="d13"></div>
+<div class="box" id="d14"></div>
+<div class="box" id="d15">DOUBLE LETTER SCORE</div>
+
+
+<div class="box" id="e1"></div>
+<div class="box" id="e2"></div>
+<div class="box" id="e3"></div>
+<div class="box" id="e4"></div>
+<div class="box" id="e5">DOUBLE WORD SCORE</div>
+<div class="box" id="e6"></div>
+<div class="box" id="e7"></div>
+<div class="box" id="e8"></div>
+<div class="box" id="e9"></div>
+<div class="box" id="e10"></div>
+<div class="box" id="e11">DOUBLE WORD SCORE</div>
+<div class="box" id="e12"></div>
+<div class="box" id="e13"></div>
+<div class="box" id="e14"></div>
+<div class="box" id="e15"></div>
+
+<div class="box" id="f1"></div>
+<div class="box" id="f2">TRIPLE LETTER SCORE</div>
+<div class="box" id="f3"></div>
+<div class="box" id="f4"></div>
+<div class="box" id="f5"></div>
+<div class="box" id="f6">TRIPLE LETTER SCORE</div>
+<div class="box" id="f7"></div>
+<div class="box" id="f8"></div>
+<div class="box" id="f9"></div>
+<div class="box" id="f10">TRIPLE LETTER SCORE</div>
+<div class="box" id="f11"></div>
+<div class="box" id="f12"></div>
+<div class="box" id="f13"></div>
+<div class="box" id="f14">TRIPLE LETTER SCORE</div>
+<div class="box" id="f15"></div>
+
+
+
+<div class="box" id="g1"></div>
+<div class="box" id="g2"></div>
+<div class="box" id="g3">DOUBLE LETTER SCORE</div>
+<div class="box" id="g4"></div>
+<div class="box" id="g5"></div>
+<div class="box" id="g6"></div>
+<div class="box" id="g7">DOUBLE LETTER SCORE</div>
+<div class="box" id="g8"></div>
+<div class="box" id="g9">DOUBLE LETTER SCORE</div>
+<div class="box" id="g10"></div>
+<div class="box" id="g11"></div>
+<div class="box" id="g12"></div>
+<div class="box" id="g13">DOUBLE LETTER SCORE</div>
+<div class="box" id="g14"></div>
+<div class="box" id="g15"></div>
+
+
+<div class="box" id="h1">TRIPLE WORD SCORE</div>
+<div class="box" id="h2"></div>
+<div class="box" id="h3"></div>
+<div class="box" id="h4">DOUBLE LETTER SCORE</div>
+<div class="box" id="h5"></div>
+<div class="box" id="h6"></div>
+<div class="box" id="h7"></div>
+<div class="box" id="h8"><p style="position: relative; font-size: 5rem; top: -100px;">&#9733</p></div>
+<div class="box" id="h9"></div>
+<div class="box" id="h10"></div>
+<div class="box" id="h11"></div>
+<div class="box" id="h12">DOUBLE LETTER SCORE</div>
+<div class="box" id="h13"></div>
+<div class="box" id="h14"></div>
+<div class="box" id="h15">TRIPLE WORD SCORE</div>
+
+
+<div class="box" id="i1"></div>
+<div class="box" id="i2"></div>
+<div class="box" id="i3">DOUBLE LETTER SCORE</div>
+<div class="box" id="i4"></div>
+<div class="box" id="i5"></div>
+<div class="box" id="i6"></div>
+<div class="box" id="i7">DOUBLE LETTER SCORE</div>
+<div class="box" id="i8"></div>
+<div class="box" id="i9">DOUBLE LETTER SCORE</div>
+<div class="box" id="i10"></div>
+<div class="box" id="i11"></div>
+<div class="box" id="i12"></div>
+<div class="box" id="i13">DOUBLE LETTER SCORE</div>
+<div class="box" id="i14"></div>
+<div class="box" id="i15"></div>
+
+
+<div class="box" id="j1"></div>
+<div class="box" id="j2">TRIPLE LETTER SCORE</div>
+<div class="box" id="j3"></div>
+<div class="box" id="j4"></div>
+<div class="box" id="j5"></div>
+<div class="box" id="j6">TRIPLE LETTER SCORE</div>
+<div class="box" id="j7"></div>
+<div class="box" id="j8"></div>
+<div class="box" id="j9"></div>
+<div class="box" id="j10">TRIPLE LETTER SCORE</div>
+<div class="box" id="j11"></div>
+<div class="box" id="j12"></div>
+<div class="box" id="j13"></div>
+<div class="box" id="j14">TRIPLE LETTER SCORE</div>
+<div class="box" id="j15"></div>
+
+
+
+<div class="box" id="k1"></div>
+<div class="box" id="k2"></div>
+<div class="box" id="k3"></div>
+<div class="box" id="k4"></div>
+<div class="box" id="k5">DOUBLE WORD SCORE</div>
+<div class="box" id="k6"></div>
+<div class="box" id="k7"></div>
+<div class="box" id="k8"></div>
+<div class="box" id="k9"></div>
+<div class="box" id="k10"></div>
+<div class="box" id="k11">DOUBLE WORD SCORE</div>
+<div class="box" id="k12"></div>
+<div class="box" id="k13"></div>
+<div class="box" id="k14"></div>
+<div class="box" id="k15"></div>
+
+
+
+<div class="box" id="l1">DOUBLE LETTER SCORE</div>
+<div class="box" id="l2"></div>
+<div class="box" id="l3"></div>
+<div class="box" id="l4">DOUBLE WORD SCORE</div>
+<div class="box" id="l5"></div>
+<div class="box" id="l6"></div>
+<div class="box" id="l7"></div>
+<div class="box" id="l8">DOUBLE LETTER SCORE</div>
+<div class="box" id="l9"></div>
+<div class="box" id="l10"></div>
+<div class="box" id="l11"></div>
+<div class="box" id="l12">DOUBLE WORD SCORE</div>
+<div class="box" id="l13"></div>
+<div class="box" id="l14"></div>
+<div class="box" id="l15">DOUBLE LETTER SCORE</div>
+
+
+<div class="box" id="m1"></div>
+<div class="box" id="m2"></div>
+<div class="box" id="m3">DOUBLE WORD SCORE</div>
+<div class="box" id="m4"></div>
+<div class="box" id="m5"></div>
+<div class="box" id="m6"></div>
+<div class="box" id="m7">DOUBLE LETTER SCORE</div>
+<div class="box" id="m8"></div>
+<div class="box" id="m9">DOUBLE LETTER SCORE</div>
+<div class="box" id="m10"></div>
+<div class="box" id="m11"></div>
+<div class="box" id="m12"></div>
+<div class="box" id="m13">DOUBLE WORD SCORE</div>
+<div class="box" id="m14"></div>
+<div class="box" id="m15"></div>
+
+
+<div class="box" id="n1"></div>
+<div class="box" id="n2">DOUBLE WORD SCORE</div>
+<div class="box" id="n3"></div>
+<div class="box" id="n4"></div>
+<div class="box" id="n5"></div>
+<div class="box" id="n6">TRIPLE LETTER SCORE</div>
+<div class="box" id="n7"></div>
+<div class="box" id="n8"></div>
+<div class="box" id="n9"></div>
+<div class="box" id="n10">TRIPLE LETTER SCORE</div>
+<div class="box" id="n11"></div>
+<div class="box" id="n12"></div>
+<div class="box" id="n13"></div>
+<div class="box" id="n14">DOUBLE WORD SCORE</div>
+<div class="box" id="n15"></div>
+
+
+<div class="box" id="o1">TRIPLE WORD SCORE</div>
+<div class="box" id="o2"></div>
+<div class="box" id="o3"></div>
+<div class="box" id="o4">DOUBLE LETTER SCORE</div>
+<div class="box" id="o5"></div>
+<div class="box" id="o6"></div>
+<div class="box" id="o7"></div>
+<div class="box" id="o8">TRIPLE WORD SCORE</div>
+<div class="box" id="o9"></div>
+<div class="box" id="o10"></div>
+<div class="box" id="o11"></div>
+<div class="box" id="o12">DOUBLE LETTER SCORE</div>
+<div class="box" id="o13"></div>
+<div class="box" id="o14"></div>
+<div class="box" id="o15">TRIPLE WORD SCORE</div>
+
+
+
+</div>
+</div>
+
+</div>
+<div id="deadSpace"></div>
+
+<script src="./jquery-3.6.0.js"></script>
+  <script src="scrabbleBoard15x15.js">
+
+  </script>
+
+
+</body>
+</html>

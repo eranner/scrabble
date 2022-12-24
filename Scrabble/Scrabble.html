@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble</title>
+
+    <link rel="stylesheet" href="scrabble.css">
+</head>
+<body>
+    <div id="gameBoard2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="gameBoard">
+
+<div class="box" id="a1" >TRIPLE WORD SCORE</div>
+<div class="box" id="a2" ></div>
+<div class="box" id="a3"></div>
+<div class="box" id="a4">DOUBLE LETTER SCORE</div>
+<div class="box" id="a5"></div>
+<div class="box" id="a6"></div>
+<div class="box" id="a7"></div>
+<div class="box" id="a8">TRIPLE WORD SCORE</div>
+<div class="box" id="a9"></div>
+<div class="box" id="a10"></div>
+<div class="box" id="a11"></div>
+<div class="box" id="a12">DOUBLE LETTER SCORE</div>
+<div class="box" id="a13"></div>
+<div class="box" id="a14"></div>
+<div class="box" id="a15">TRIPLE WORD SCORE</div>
+
+<div class="box" id="b1"></div>
+<div class="box" id="b2">DOUBLE WORD SCORE</div>
+<div class="box" id="b3"></div>
+<div class="box" id="b4"></div>
+<div class="box" id="b5"></div>
+<div class="box" id="b6">TRIPLE LETTER SCORE</div>
+<div class="box" id="b7"></div>
+<div class="box" id="b8"></div>
+<div class="box" id="b9"></div>
+<div class="box" id="b10">TRIPLE LETTER SCORE</div>
+<div class="box" id="b11"></div>
+<div class="box" id="b12"></div>
+<div class="box" id="b13"></div>
+<div class="box" id="b14">DOUBLE WORD SCORE</div>
+<div class="box" id="b15"></div>
+
+<div class="box" id="c1"></div>
+<div class="box" id="c2"></div>
+<div class="box" id="c3">DOUBLE WORD SCORE</div>
+<div class="box" id="c4"></div>
+<div class="box" id="c5"></div>
+<div class="box" id="c6"></div>
+<div class="box" id="c7">DOUBLE LETTER SCORE</div>
+<div class="box" id="c8"></div>
+<div class="box" id="c9">DOUBLE LETTER SCORE</div>
+<div class="box" id="c10"></div>
+<div class="box" id="c11"></div>
+<div class="box" id="c12"></div>
+<div class="box" id="c13">DOUBLE WORD SCORE</div>
+<div class="box" id="c14"></div>
+<div class="box" id="c15"></div>
+
+<div class="box" id="d1">DOUBLE LETTER SCORE</div>
+<div class="box" id="d2"></div>
+<div class="box" id="d3"></div>
+<div class="box" id="d4">DOUBLE WORD SCORE</div>
+<div class="box" id="d5"></div>
+<div class="box" id="d6"></div>
+<div class="box" id="d7"></div>
+<div class="box" id="d8">DOUBLE LETTER SCORE</div>
+<div class="box" id="d9"></div>
+<div class="box" id="d10"></div>
+<div class="box" id="d11"></div>
+<div class="box" id="d12">DOUBLE WORD SCORE</div>
+<div class="box" id="d13"></div>
+<div class="box" id="d14"></div>
+<div class="box" id="d15">DOUBLE LETTER SCORE</div>
+
+<div class="box" id="e1"></div>
+<div class="box" id="e2"></div>
+<div class="box" id="e3"></div>
+<div class="box" id="e4"></div>
+<div class="box" id="e5">DOUBLE WORD SCORE</div>
+<div class="box" id="e6"></div>
+<div class="box" id="e7"></div>
+<div class="box" id="e8"></div>
+<div class="box" id="e9"></div>
+<div class="box" id="e10"></div>
+<div class="box" id="e11">DOUBLE WORD SCORE</div>
+<div class="box" id="e12"></div>
+<div class="box" id="e13"></div>
+<div class="box" id="e14"></div>
+<div class="box" id="e15"></div>
+
+<div class="box" id="f1"></div>
+<div class="box" id="f2">TRIPLE LETTER SCORE</div>
+<div class="box" id="f3"></div>
+<div class="box" id="f4"></div>
+<div class="box" id="f5"></div>
+<div class="box" id="f6">TRIPLE LETTER SCORE</div>
+<div class="box" id="f7"></div>
+<div class="box" id="f8"></div>
+<div class="box" id="f9"></div>
+<div class="box" id="f10">TRIPLE LETTER SCORE</div>
+<div class="box" id="f11"></div>
+<div class="box" id="f12"></div>
+<div class="box" id="f13"></div>
+<div class="box" id="f14">TRIPLE LETTER SCORE</div>
+<div class="box" id="f15"></div>
+
+<div class="box" id="g1"></div>
+<div class="box" id="g2"></div>
+<div class="box" id="g3">DOUBLE LETTER SCORE</div>
+<div class="box" id="g4"></div>
+<div class="box" id="g5"></div>
+<div class="box" id="g6"></div>
+<div class="box" id="g7">DOUBLE LETTER SCORE</div>
+<div class="box" id="g8"></div>
+<div class="box" id="g9">DOUBLE LETTER SCORE</div>
+<div class="box" id="g10"></div>
+<div class="box" id="g11"></div>
+<div class="box" id="g12"></div>
+<div class="box" id="g13">DOUBLE LETTER SCORE</div>
+<div class="box" id="g14"></div>
+<div class="box" id="g15"></div>
+
+<div class="box" id="h1">TRIPLE WORD SCORE</div>
+<div class="box" id="h2"></div>
+<div class="box" id="h3"></div>
+<div class="box" id="h4">DOUBLE LETTER SCORE</div>
+<div class="box" id="h5"></div>
+<div class="box" id="h6"></div>
+<div class="box" id="h7"></div>
+<div class="box" id="h8"><p style="position: relative; top: -100px;">&#9733</p></div>
+<div class="box" id="h9"></div>
+<div class="box" id="h10"></div>
+<div class="box" id="h11"></div>
+<div class="box" id="h12">DOUBLE LETTER SCORE</div>
+<div class="box" id="h13"></div>
+<div class="box" id="h14"></div>
+<div class="box" id="h15">TRIPLE WORD SCORE</div>
+
+<div class="box" id="i1"></div>
+<div class="box" id="i2"></div>
+<div class="box" id="i3">DOUBLE LETTER SCORE</div>
+<div class="box" id="i4"></div>
+<div class="box" id="i5"></div>
+<div class="box" id="i6"></div>
+<div class="box" id="i7">DOUBLE LETTER SCORE</div>
+<div class="box" id="i8"></div>
+<div class="box" id="i9">DOUBLE LETTER SCORE</div>
+<div class="box" id="i10"></div>
+<div class="box" id="i11"></div>
+<div class="box" id="i12"></div>
+<div class="box" id="i13">DOUBLE LETTER SCORE</div>
+<div class="box" id="i14"></div>
+<div class="box" id="i15"></div>
+
+<div class="box" id="j1"></div>
+<div class="box" id="j2">TRIPLE LETTER SCORE</div>
+<div class="box" id="j3"></div>
+<div class="box" id="j4"></div>
+<div class="box" id="j5"></div>
+<div class="box" id="j6">TRIPLE LETTER SCORE</div>
+<div class="box" id="j7"></div>
+<div class="box" id="j8"></div>
+<div class="box" id="j9"></div>
+<div class="box" id="j10">TRIPLE LETTER SCORE</div>
+<div class="box" id="j11"></div>
+<div class="box" id="j12"></div>
+<div class="box" id="j13"></div>
+<div class="box" id="j14">TRIPLE LETTER SCORE</div>
+<div class="box" id="j15"></div>
+
+<div class="box" id="k1"></div>
+<div class="box" id="k2"></div>
+<div class="box" id="k3"></div>
+<div class="box" id="k4"></div>
+<div class="box" id="k5">DOUBLE WORD SCORE</div>
+<div class="box" id="k6"></div>
+<div class="box" id="k7"></div>
+<div class="box" id="k8"></div>
+<div class="box" id="k9"></div>
+<div class="box" id="k10"></div>
+<div class="box" id="k11">DOUBLE WORD SCORE</div>
+<div class="box" id="k12"></div>
+<div class="box" id="k13"></div>
+<div class="box" id="k14"></div>
+<div class="box" id="k15"></div>
+
+<div class="box" id="l1">DOUBLE LETTER SCORE</div>
+<div class="box" id="l2"></div>
+<div class="box" id="l3"></div>
+<div class="box" id="l4">DOUBLE WORD SCORE</div>
+<div class="box" id="l5"></div>
+<div class="box" id="l6"></div>
+<div class="box" id="l7"></div>
+<div class="box" id="l8">DOUBLE LETTER SCORE</div>
+<div class="box" id="l9"></div>
+<div class="box" id="l10"></div>
+<div class="box" id="l11"></div>
+<div class="box" id="l12">DOUBLE WORD SCORE</div>
+<div class="box" id="l13"></div>
+<div class="box" id="l14"></div>
+<div class="box" id="l15">DOUBLE LETTER SCORE</div>
+
+<div class="box" id="m1"></div>
+<div class="box" id="m2"></div>
+<div class="box" id="m3">DOUBLE WORD SCORE</div>
+<div class="box" id="m4"></div>
+<div class="box" id="m5"></div>
+<div class="box" id="m6"></div>
+<div class="box" id="m7">DOUBLE LETTER SCORE</div>
+<div class="box" id="m8"></div>
+<div class="box" id="m9">DOUBLE LETTER SCORE</div>
+<div class="box" id="m10"></div>
+<div class="box" id="m11"></div>
+<div class="box" id="m12"></div>
+<div class="box" id="m13">DOUBLE WORD SCORE</div>
+<div class="box" id="m14"></div>
+<div class="box" id="m15"></div>
+
+<div class="box" id="n1"></div>
+<div class="box" id="n2">DOUBLE WORD SCORE</div>
+<div class="box" id="n3"></div>
+<div class="box" id="n4"></div>
+<div class="box" id="n5"></div>
+<div class="box" id="n6">TRIPLE LETTER SCORE</div>
+<div class="box" id="n7"></div>
+<div class="box" id="n8"></div>
+<div class="box" id="n9"></div>
+<div class="box" id="n10">TRIPLE LETTER SCORE</div>
+<div class="box" id="n11"></div>
+<div class="box" id="n12"></div>
+<div class="box" id="n13"></div>
+<div class="box" id="n14">DOUBLE WORD SCORE</div>
+<div class="box" id="n15"></div>
+
+<div class="box" id="o1">TRIPLE WORD SCORE</div>
+<div class="box" id="o2"></div>
+<div class="box" id="o3"></div>
+<div class="box" id="o4">DOUBLE LETTER SCORE</div>
+<div class="box" id="o5"></div>
+<div class="box" id="o6"></div>
+<div class="box" id="o7"></div>
+<div class="box" id="o8">TRIPLE WORD SCORE</div>
+<div class="box" id="o9"></div>
+<div class="box" id="o10"></div>
+<div class="box" id="o11"></div>
+<div class="box" id="o12">DOUBLE LETTER SCORE</div>
+<div class="box" id="o13"></div>
+<div class="box" id="o14"></div>
+<div class="box" id="o15">TRIPLE WORD SCORE</div>
+
+<div id="lettersA_M">
+    <!--A Tiles-->
+<img class="tile" src="./A.svg" >
+<img class="tile" src="./A.svg" >
+<img class="tile" src="./A.svg" >
+<img class="tile" src="./A.svg" >
+<img class="tile" src="./A.svg" >
+<img class="tile" src="./A.svg" >
+<img class="tile" src="./A.svg" >
+<img class="tile" src="./A.svg" >
+<img class="tile" src="./A.svg" >
+
+<!--B Tiles-->
+
+    <img class="tile" src="./B.svg">  
+    <img class="tile" src="./B.svg">            
+ 
+   
+   <!--C Tiles-->
+    <img class="tile" src="./C.svg"> 
+    <img class="tile" src="./C.svg">     
+    
+
+ <!--D Tiles-->
+    <img class="tile" src="./D.svg">   
+    <img class="tile" src="./D.svg">   
+    <img class="tile" src="./D.svg">   
+    <img class="tile" src="./D.svg">   
+
+ <!--E Tiles-->
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+    <img class="tile" src="./E.svg">
+
+
+
+<!--F Tiles-->
+
+    <img class="tile" src="./F.svg">    
+    <img class="tile" src="./F.svg">
+
+ <!--G Tiles-->
+    <img class="tile" src="./G.svg">   
+    <img class="tile" src="./G.svg">   
+    <img class="tile" src="./G.svg">   
+
+    <!--H Tiles-->
+    <img class="tile" src="./H.svg">    
+    <img class="tile" src="./H.svg"> 
+
+<!--I Tiles-->
+    <img class="tile" src="./I.svg">    
+    <img class="tile" src="./I.svg">   
+    <img class="tile" src="./I.svg">   
+    <img class="tile" src="./I.svg">   
+    <img class="tile" src="./I.svg">   
+    <img class="tile" src="./I.svg">   
+    <img class="tile" src="./I.svg">   
+    <img class="tile" src="./I.svg">   
+    <img class="tile" src="./I.svg">   
+
+    <img class="tile" src="./J.svg">
+
+    <img class="tile" src="./K.svg">
+
+    <img class="tile" src="./L.svg">
+    <img class="tile" src="./L.svg">
+    <img class="tile" src="./L.svg">
+    <img class="tile" src="./L.svg">
+
+
+    <img class="tile" src="./M.svg">
+    <img class="tile" src="./M.svg">
+    
+</div>
+<div id="lettersN_Z">
+    <img class="tile" src="./N.svg">
+    <img class="tile" src="./N.svg">
+    <img class="tile" src="./N.svg">
+    <img class="tile" src="./N.svg">
+    <img class="tile" src="./N.svg">
+    <img class="tile" src="./N.svg">
+
+
+    <img class="tile" src="./O.svg">
+    <img class="tile" src="./O.svg">
+    <img class="tile" src="./O.svg">
+    <img class="tile" src="./O.svg">
+    <img class="tile" src="./O.svg">
+    <img class="tile" src="./O.svg">
+    <img class="tile" src="./O.svg">
+    <img class="tile" src="./O.svg">
+
+
+    <img class="tile" src="./P.svg">
+    <img class="tile" src="./P.svg">
+
+
+    <img class="tile" src="./Q.svg">
+
+    <img class="tile" src="./R.svg">
+    <img class="tile" src="./R.svg">
+    <img class="tile" src="./R.svg">
+    <img class="tile" src="./R.svg">
+    <img class="tile" src="./R.svg">
+    <img class="tile" src="./R.svg">
+
+    <img class="tile" src="./S.svg">
+    <img class="tile" src="./S.svg">
+    <img class="tile" src="./S.svg">
+    <img class="tile" src="./S.svg">
+
+
+    <img class="tile" src="./T.svg">
+    <img class="tile" src="./T.svg">
+    <img class="tile" src="./T.svg">
+    <img class="tile" src="./T.svg">
+    <img class="tile" src="./T.svg">
+    <img class="tile" src="./T.svg">
+
+
+    <img class="tile" src="./U.svg">
+    <img class="tile" src="./U.svg">
+    <img class="tile" src="./U.svg">
+    <img class="tile" src="./U.svg">
+
+
+    <img class="tile" src="./V.svg">
+    <img class="tile" src="./V.svg">
+
+
+    <img class="tile" src="./W.svg">
+    <img class="tile" src="./W.svg">
+
+
+    <img class="tile" src="./X.svg">
+
+
+    <img class="tile" src="./Y.svg">
+    <img class="tile" src="./Y.svg">
+
+
+    <img class="tile" src="./Z.svg">
+
+    <img class="tile" src="./BLANK.svg">
+    <img class="tile" src="./BLANK.svg">
+
+</div>
+
+</div>
+
+  <script src="scrabble.js"></script>  
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+  <script>
+  $( function() {
+    $( ".tile" ).draggable();
+  } );
+  </script>
+</body>
+</html>
